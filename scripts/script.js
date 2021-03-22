@@ -30,20 +30,20 @@ function calcular(){
     console.log(qdtTotalCarne);
 
     //O "innerHTML" apaga o que tiver anteriomente, por isso usamos "+="    
-    resultado.innerHTML = `<p>${qdtTotalCarne / 1000}kg de Carne</p>  `
+    resultado.innerHTML = `<p>${qdtTotalCarne / 1000} kg de Carne</p>  `
         //Usa o "createElement" e o "appendChild" para colocar uma imagem no final da mensagem
         const div = document.getElementById("resultado");
         const image = document.createElement("img");
-        image.src = "../imagens/meat.png";
+        image.src = "./imagens/meat.png";
         image.width = 30;
         div.appendChild(image);
 
     resultado.innerHTML += `<p>${Math.ceil(qdtTotalCerveja / 355)} Latas de Cerveja</p>  `
-        image.src = "../imagens/beer.png";
+        image.src = "./imagens/beer.png";
         div.appendChild(image);
 
     resultado.innerHTML += `<p>${Math.ceil(qdtTotalBebida / 2000)} Pet's de "2L" de Bebia</p>  `
-        image.src = "../imagens/soda.png";
+        image.src = "./imagens/soda.png";
         div.appendChild(image);
 }
 
